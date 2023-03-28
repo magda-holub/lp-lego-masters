@@ -1,0 +1,641 @@
+@import ../sass/partials/_mixins
+@import ../sass/partials/_colors
+@import ../sass/partials/_reset
+@import ../sass/partials/_alza
+@import ../sass/partials/_switcher
+@import ../sass/partials/_swiper
+@import ../sass/partials/_carousel
+
+#landingpage
+    @include roboto
+    color: $grey-6
+
+    .lp
+        &-perex
+            @include section(76, 165, 76, 165)
+            @include bgrLight
+            @include flexOr
+            align-items: center
+            gap: 16px
+
+            *
+                flex: 1 1 0
+
+            &--caption
+                @include flexVert
+                gap: 24px
+
+                h2
+                    @include type(30px, 1.25, 700)
+                    text-transform: uppercase
+                    @include roboto
+                    color: $red
+
+                h3
+                    @include type(24px, 1.25, 500)
+                    color: $gold
+                    @include roboto
+
+                p
+                    @include type(16px, 1.5, 400)
+                    @include roboto
+                    margin-top: unset
+
+            &--image
+                width: 49%
+
+        &-expo
+            @include section(48, 165, 60, 165)
+            @include bgrLight
+            @include flexOr
+            align-items: center
+            gap: 48px
+
+            *
+                flex: 1 1 0
+
+            &--caption
+                @include flexVert
+                gap: 24px
+                text-align: left
+                position: relative
+                z-index: 5
+
+                h3
+                    @include type(24px, 1.25, 500)
+                    color: $gold
+                    @include roboto
+
+                p
+                    @include type(16px, 1.5, 400)
+                    @include roboto
+                    margin-top: unset
+
+                    a
+                        color: $midnight
+                        font-weight: 500
+
+                        &:hover
+                            color: $gold
+
+            &--image
+                width: 49%
+                border-radius: 4px
+
+        &-screen
+            @include section(76, 165, 76, 165)
+            @include bgrLight
+            @include flexOr
+            align-items: center
+            gap: 48px
+            
+            *
+                flex: 1 1 0
+
+            &--caption
+                @include flexVert
+                gap: 24px
+
+                h2
+                    @include type(30px, 1.25, 700)
+                    text-transform: uppercase
+                    @include roboto
+                    color: $grey-6
+
+                h3
+                    @include type(24px, 1.25, 500)
+                    color: $gold
+                    @include roboto
+
+                p
+                    @include type(16px, 1.5, 400)
+                    @include roboto
+                    margin-top: unset
+
+            &--image
+                width: 46%
+
+        &-win
+            @include section(76, 65, 76, 65)
+            @include bgrDark
+            @include flexVert
+            gap: 48px
+            align-items: center
+
+            h3
+                @include type(24px, 1.25, 500)
+                color: $midnight
+                text-align: center
+                @include roboto
+                
+                span
+                    display: block
+
+            &--boxes
+                @include flexOr
+                gap: 20px
+
+            &--box
+                text-align: center
+                background-color: $white
+                border-radius: 4px
+                box-shadow: 0 1px 4px 0px rgba(0,0,0,0.15)
+                padding: 48px
+                @include flexVert
+                align-items: center
+                gap: 32px
+                flex-basis: calc((100% - 20px * (3 - 1)) / 3)
+                cursor: default
+                position: relative
+
+                .icon
+                    width: 54px
+                    height: 54px
+
+                &--num
+                    position: absolute
+                    top: -16px
+                    height: 32px
+                    width: 32px
+                    border-radius: 50%
+                    background-color: $midnight
+                    @include flexVert
+                    justify-content: center
+
+                    p
+                        @include type(14px, 1, 500)
+                        @include roboto
+                        color: $white
+                        margin-top: unset
+
+                &--caption
+                    p
+                        @include type(14px, 1.5, 500)
+                        margin-top: unset
+
+        &-text
+            @include section(48, 165, 60, 165)
+            @include bgrLight
+            @include flexOr
+            align-items: center
+            gap: 16px
+
+            *
+                flex: 1 1 0
+
+            &--caption
+                @include flexVert
+                gap: 24px
+                text-align: left
+                position: relative
+                z-index: 5
+
+                h3
+                    @include type(24px, 1.25, 500)
+                    color: $gold
+                    @include roboto
+
+                p
+                    @include type(16px, 1.5, 400)
+                    @include roboto
+                    margin-top: unset
+
+            &--image
+                width: 47%
+
+        &-carousel
+            @include section(76, 65, 76, 65)
+            @include bgrDark
+
+        &-zigzag
+            @include section(76, 65, 76, 65)
+            @include flexVert
+            @include bgrLight
+            gap: 76px
+
+            &--row
+                @include flexOr
+                gap: 76px
+                align-items: center
+
+                *
+                    flex: 1 1 0
+
+                &--caption
+                    padding: 48px
+
+                    h3
+                        @include type(24px, 1.25, 500)
+                        color: $gold
+                        @include roboto
+                    p
+                        @include type(16px, 1.5, 400)
+                        @include roboto
+                        margin-top: 24px
+
+                &--image
+                    width: 48%
+
+                &:nth-last-of-type(even)
+                    justify-content: flex-end
+                    
+                    .lp-zigzag--row--caption
+                        order: -1
+
+        &-faq
+            @include section(76, 165, 76, 165)
+            @include bgrLight
+            @include flexVert
+            align-items: center
+            gap: 48px
+
+            &--caption
+                text-align: center
+                @include flexVert
+                gap: 24px
+
+                h3
+                    @include type(24px, 1.25, 500)
+                    color: $gold
+                    @include roboto
+
+            &--units
+                @include flexVert
+                gap: 16px
+                width: 100%
+
+            &--box 
+                background-color: $white
+                border-radius: 8px
+                box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.15)
+                padding: 16px
+                cursor: pointer
+                transition: all 300ms ease-in-out
+
+                &:hover
+                    box-shadow: 0 1px 8px 0 rgba(0, 0, 0, 0.2)
+
+                &__handle 
+                    @include flexOr
+                    gap: 16px
+                    color: $gold
+
+                    h4
+                        @include type(14px, 1.5, 500)
+                        @include roboto
+                        color: $gold
+                
+
+                &__content 
+                    padding: 0 36px
+                    max-height: 0
+                    overflow: hidden
+                    will-change: max-height
+                    transition: all 300ms ease-in-out
+                    opacity: 0
+
+                    p
+                        @include type(14px, 1.5, 400)
+                        margin-top: 0
+                
+                &__active 
+                    .lp-faq--box__content 
+                        padding: 8px 36px 20px
+                        opacity: 1
+
+                    .lp-faq--box--icon
+                        transform: rotate(0deg)
+
+                &--icon
+                    width: 20px
+                    height: 20px
+                    transform: rotate(180deg)
+                    transition: all 300ms  ease-in-out
+
+        &-history
+            @include section(24, 165, 76, 165)
+            @include bgrLight
+            @include flexVert
+            gap: 76px
+
+            &--row
+                @include flexOr
+                justify-content: space-between
+                align-items: center
+
+            &--caption
+                @include flexVert
+                gap: 24px
+                width: 47%
+
+                h3
+                    @include type(24px, 1.25, 500)
+                    color: $gold
+                    @include roboto
+
+                p
+                    @include type(16px, 1.5, 400)
+                    @include roboto
+                    margin-top: unset
+
+            &--image
+                width: 50%
+                padding: 32px
+
+        &-video
+            @include section(76, 65, 76, 65)
+            @include bgrLight
+            position: relative
+
+            h3
+                    @include type(24px, 1.25, 500)
+                    color: $gold
+                    text-align: center
+                    @include roboto
+
+            &--container
+                flex-basis: 50%
+
+                .alza-btn
+                    margin: 16px 0 32px 50%
+                    transform: translate(-50%, 0)
+                 
+                div
+                    position: relative
+                    padding-bottom: 56.25%
+
+                    iframe
+                        border-radius: 4px
+                        position: absolute
+                        top: 0
+                        left: 0
+                        right: 0
+                        bottom: 0
+                        display: blckock
+                        width: 100%
+                        height: 100% 
+
+            &--row
+                @include flexOr
+                justify-content: center
+                gap: 24px
+                margin-top: 48px
+
+                a
+                    margin-top: 24px
+                    align-self: center
+
+.layout-0 #landingpage
+    .lp-perex, .lp-text, .lp-faq, .lp-screen
+            @include section(76, 65, 76, 65)
+
+    .lp
+        &-expo
+            @include section(48, 65, 60, 65)
+
+        &-history
+            @include section(24, 65, 76, 65)
+
+        &-zigzag--row
+            &--image
+                width: 46%
+
+            &--caption
+                padding: 0
+
+@media only screen and (max-width: 1035px)
+    .mobile #landingpage,
+    .mobileapp #landingpage
+        .lp
+            &-perex
+                @include section(76, 65, 66, 65)
+                flex-direction: column-reverse
+                gap: 60px
+
+                h2, h3, p
+                    text-align: center
+
+            &-screen
+                @include section(76, 65, 66, 65)
+                flex-direction: column-reverse
+                gap: 60px
+
+                h2, h3, p
+                    text-align: center
+
+            &-win
+                &--box
+                    padding-left: 24px
+                    padding-right: 24px
+
+            &-expo
+                @include section(26, 65, 50, 65)
+                flex-direction: column-reverse
+                gap: 60px
+
+                h3, p
+                    text-align: center
+
+                &--image
+                    order: 1
+                    width: 100%
+
+            &-text
+                @include section(76, 65, 50, 65)
+                flex-direction: column-reverse
+                gap: 60px
+
+                h3, p
+                    text-align: center
+
+                &--image
+                    order: -1
+
+            &-zigzag
+                &--row
+                    gap: 4%
+
+                    &--caption
+                        width: unset
+
+            &-history
+                @include section(24, 65, 0, 65)
+                gap: 32px
+
+                &--row
+                    flex-direction: column-reverse
+                    gap: 32px
+
+                    h3, p
+                        text-align: center
+
+                    &:nth-of-type(1) .lp-history--image
+                        order: 0
+
+                    &:nth-of-type(2) .lp-history--image
+                        order: -1
+
+                &--caption
+                    width: unset
+
+                &--image
+                    width: unset
+
+@media only screen and (max-width: 755px)
+    .mobile #landingpage,
+    .mobileapp #landingpage
+        .lp
+            &-perex, &-screen
+                &--caption
+                    h2
+                        @include type(24px, 1.25, 700)
+
+                    h3
+                        @include type(20px, 1.25, 500)
+
+                    p
+                        @include type(14px, 1.5, 400)
+
+                &--image
+                    width: unset
+                    order: 1
+
+            &-expo
+                &--caption
+                    h3
+                        @include type(20px, 1.25, 500)
+
+                    p
+                        @include type(14px, 1.5, 400)
+
+            &-win
+                h3
+                    @include type(20px, 1.5, 500)
+
+                &--boxes
+                    flex-direction: column
+                    max-width: 300px
+
+            &-text
+                &--caption
+                    h3
+                        @include type(20px, 1.25, 500)
+
+                    p
+                        @include type(14px, 1.5, 400)
+
+                &--image
+                    width: unset
+
+            &-carousel
+                .swiper
+                    h3
+                        @include type(20px, 1.25, 500) 
+
+            &-zigzag
+                gap: 48px
+
+                &--row
+                    flex-direction: column
+                    gap: 48px
+
+                    &--image
+                        width: 100%
+
+                    &--caption
+                        padding: 0
+
+                        h3
+                            @include type(20px, 1.25, 500)
+                            text-align: center
+                        p
+                            @include type(14px, 1.5, 400)
+                            text-align: center
+
+                    &:nth-last-of-type(even) .lp-zigzag--row--caption
+                        order: 0
+
+                        h3, p
+                            text-align: center
+
+            &-faq
+                @include section(76, 65, 76, 65)
+
+                &--box
+                    &__handle h4
+                        flex: 1 1 0
+
+                    &--icon
+                        width: 12px
+
+                    &__content 
+                        padding: 0 28px
+                
+                    &__active 
+                        .lp-faq--box__content 
+                            padding: 8px 28px 20px
+
+                h3
+                    @include type(20px, 1.25, 500)
+
+                h4
+                    @include type(14px, 1.5, 500)
+
+                p
+                    @include type(13px, 1.5, 400)
+
+            &-history
+                h3
+                    @include type(20px, 1.25, 500)
+
+                p
+                    @include type(14px, 1.5, 400)
+
+            &-video
+                &--row
+                    flex-direction: column
+                    gap: 48px
+
+                h3
+                    @include type(20px, 1.25, 500)
+
+@media only screen and (max-width: 450px)
+    .mobile #landingpage,
+    .mobileapp #landingpage
+        .lp
+            &-perex, &-screen
+                @include section(36, 30, 46, 30)
+                gap: 24px
+
+            &-expo
+                @include section(16, 30, 46, 30)
+                
+            &-win
+                @include section(56, 30, 56, 30)
+                
+            &-text
+                @include section(56, 30, 40, 30)
+
+            &-carousel
+                @include section(56, 30, 56, 30)
+                
+            &-zigzag
+                @include section(56, 30, 56, 30)
+
+            &-faq
+                @include section(56, 30, 56, 30)
+
+            &-history
+                @include section(30, 30, 0, 30)
+
+            &-video
+                @include section(36, 30, 56, 30)
+                
+                &--row--unit
+                    width: 100%
+
+                    p
+                        text-align: center
+
+                    img
+                        display: none

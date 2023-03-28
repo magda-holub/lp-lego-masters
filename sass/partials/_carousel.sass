@@ -1,0 +1,198 @@
+// carousel
+#landingpage .ppCarousel
+    position: relative
+
+    .swiper
+        max-width: 100%
+        position: relative
+        background-color: $white
+        border-radius: 4px
+        box-shadow: 0 1px 4px 0px rgba(0,0,0,0.15)
+        padding: 48px
+        overflow: hidden
+
+        h3
+            padding-bottom: 32px
+            text-align: center
+            @include type(24px, 1.25, 500)
+            @include roboto
+            color: $midnight
+
+        a.alza-btn
+            background-color: $midnight
+            margin-left: 50%
+            margin-top: 66px
+            width: 144px
+            transform: translateX(-50%)
+
+            &:hover
+                background-color: lighten($midnight, 12%)
+
+        // carousel
+        .swiper-container
+            height: auto
+            padding: 24px 10px
+            margin: 0 auto
+            overflow:  hidden
+        
+
+        .swiper-wrapper
+            padding-bottom: 10px
+            width: 100%
+            margin: 0 auto
+            height: auto
+        
+
+        a.swiper-slide
+            border-radius: 6px
+            cursor: pointer
+            height: auto
+            transition: all 300ms ease-in-out
+            box-sizing: border-box
+            background: $white
+            text-align: center
+            padding: 24px
+            @include flexVert
+            gap: 24px
+            text-decoration: none
+
+            p
+                @include type(14px, 1.5, 500)
+                @include roboto
+                margin-top: unset
+                color: $grey-6
+                transition: all 300ms ease-in-out
+
+            p.swiper-product-name
+                height: 70px
+
+            .swiper-product-img
+                margin-bottom: 10px
+
+            p.swiper-product-price
+                color: $red
+                @include type(14px, 1.5, 400)
+
+            &:hover
+                box-shadow: 0 2px 6px 0px rgba(0,0,0,0.15)
+            
+            
+        // Bullets
+        .swiper-pagination
+            bottom: auto
+            left: 50%
+            transform: translate(-50%, 0)
+        
+
+        .swiper-pagination-bullet
+            margin-right: 5px
+
+            &:last-of-type
+                margin-right: 0
+            
+        
+
+        .swiper-pagination-bullet
+            opacity: 1
+            background: #E8E8E8
+            width: 12px
+            height: 12px
+        
+
+        .swiper-pagination-bullet-active
+            background-color: $midnight
+            opacity: 1
+        
+
+        .swiper-pagination-bullet:focus,
+        .swiper-pagination-bullet-active:focus
+            outline: transparent
+        
+
+        // Buttons
+        .swiper-button-next, .swiper-button-prev
+            top: 50%
+            height: 32px
+            transform: translateY(-50%)
+        
+
+        .swiper-button-next:focus, .swiper-button-prev:focus
+            outline: transparent
+        
+
+        .swiper-button-prev, 
+        .swiper-container-rtl .swiper-button-next,
+        .swiper-button-next, 
+        .swiper-container-rtl .swiper-button-prev
+            background-image: none
+        
+
+        .swiper-button-prev:after,
+        .swiper-button-next:after
+            display: none
+        
+
+        .swiper-button-prev,
+        .swiper-button-next
+            width: 25px
+            height: 60px
+            background-color: $midnight
+            border-radius: 0 4px 4px 0
+            transition: .3s ease-in-out
+            box-shadow: 0 1px 4px 0px rgba(0,0,0,0.15)
+            margin: 0
+
+            &:hover
+                background-color: lighten($midnight, 12%)
+            
+
+            .swiper-button-img
+                width: 12px
+
+                path
+                    fill: $white
+                            
+
+        .swiper-button-prev
+            left: 0
+
+            .swiper-button-img
+                margin-left: 4px
+            
+        
+
+        .swiper-button-next
+                    right: 0
+                    border-radius: 4px 0 0 4px
+                    box-shadow: 0 1px 4px 0px rgba(0,0,0,0.15)
+
+                    .swiper-button-img
+                        margin-right: 4px
+    
+ 
+    
+// MOBILE & APP version
+@media only screen and (max-width: 810px)
+    .mobile #landingpage,
+    .mobileapp #landingpage
+        .ppCarousel
+            .swiper
+                a.alza-btn
+                    margin-top: 0
+                
+                .swiper-pagination
+                    display: none
+
+                a.swiper-slide:hover
+                    box-shadow: none
+
+@media only screen and (max-width: 535px)
+    .mobile #landingpage,
+    .mobileapp #landingpage
+        .ppCarousel
+            .swiper
+                .swiper-slide
+                    padding: 0
+
+                a.swiper-slide p.swiper-product-name
+                    height: unset
