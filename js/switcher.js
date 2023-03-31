@@ -1,15 +1,23 @@
-$("#layout_switch button").on("click", function () {
-    $("#testLayout").removeClass("layout-0").removeClass("layout-1");
-    $("body").addClass("mobile");
+const layoutSwitchButtons = document.querySelectorAll("#layout_switch button");
+
+layoutSwitchButtons[0].addEventListener("click", function () {
+    const testLayout = document.querySelector("#testLayout");
+    testLayout.classList.remove("layout-0");
+    testLayout.classList.remove("layout-1");
+    document.body.classList.add("mobile");
     console.log('mobile layout');
 });
-$("#layout_switch button:nth-child(2)").on("click", function () {
-    $("#testLayout").addClass("layout-0");
-    $("body.mobile").removeClass("mobile");
+
+layoutSwitchButtons[1].addEventListener("click", function () {
+    const testLayout = document.querySelector("#testLayout");
+    testLayout.classList.add("layout-0");
+    document.body.classList.remove("mobile");
     console.log('3 column layout');
 });
-$("#layout_switch button:nth-child(3)").on("click", function () {
-    $("#testLayout").addClass("layout-1");
-    $("body.mobile").removeClass("mobile");
+
+layoutSwitchButtons[2].addEventListener("click", function () {
+    const testLayout = document.querySelector("#testLayout");
+    testLayout.classList.add("layout-1");
+    document.body.classList.remove("mobile");
     console.log('4 column layout');
 });
