@@ -1,23 +1,21 @@
-const layoutSwitchButtons = document.querySelectorAll("#layout_switch button");
+const layoutSwitch = document.querySelector("#layout_switch");
+const testLayout = document.querySelector("#testLayout");
+const body = document.body;
 
-layoutSwitchButtons[0].addEventListener("click", function () {
-    const testLayout = document.querySelector("#testLayout");
-    testLayout.classList.remove("layout-0");
-    testLayout.classList.remove("layout-1");
-    document.body.classList.add("mobile");
-    console.log('mobile layout');
-});
-
-layoutSwitchButtons[1].addEventListener("click", function () {
-    const testLayout = document.querySelector("#testLayout");
+layoutSwitch.addEventListener("click", function(event) {
+  const button = event.target;
+  
+  if (button.matches("button:first-child")) {
+    testLayout.classList.remove("layout-0", "layout-1");
+    body.classList.add("mobile");
+    console.log("mobile layout");
+  } else if (button.matches("button:nth-child(2)")) {
     testLayout.classList.add("layout-0");
-    document.body.classList.remove("mobile");
-    console.log('3 column layout');
-});
-
-layoutSwitchButtons[2].addEventListener("click", function () {
-    const testLayout = document.querySelector("#testLayout");
+    body.classList.remove("mobile");
+    console.log("3 column layout");
+  } else if (button.matches("button:nth-child(3)")) {
     testLayout.classList.add("layout-1");
-    document.body.classList.remove("mobile");
-    console.log('4 column layout');
+    body.classList.remove("mobile");
+    console.log("4 column layout");
+  }
 });
