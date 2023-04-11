@@ -21,7 +21,7 @@
             *
                 flex: 1 1 0
 
-            &--caption
+            &__caption
                 @include flexVert
                 gap: 24px
 
@@ -41,7 +41,7 @@
                     @include roboto
                     margin-top: unset
 
-            &--image
+            &__image
                 width: 49%
 
         &-expo
@@ -54,7 +54,7 @@
             *
                 flex: 1 1 0
 
-            &--caption
+            &__caption
                 @include flexVert
                 gap: 24px
                 text-align: left
@@ -78,42 +78,9 @@
                         &:hover
                             color: $gold
 
-            &--image
+            &__image
                 width: 49%
                 border-radius: 4px
-
-        &-screen
-            @include section(76, 165, 76, 165)
-            @include bgrLight
-            @include flexOr
-            align-items: center
-            gap: 48px
-            
-            *
-                flex: 1 1 0
-
-            &--caption
-                @include flexVert
-                gap: 24px
-
-                h2
-                    @include type(30px, 1.25, 700)
-                    text-transform: uppercase
-                    @include roboto
-                    color: $grey-6
-
-                h3
-                    @include type(24px, 1.25, 500)
-                    color: $gold
-                    @include roboto
-
-                p
-                    @include type(16px, 1.5, 400)
-                    @include roboto
-                    margin-top: unset
-
-            &--image
-                width: 46%
 
         &-win
             @include section(76, 65, 76, 65)
@@ -131,11 +98,11 @@
                 span
                     display: block
 
-            &--boxes
+            &__boxes
                 @include flexOr
                 gap: 20px
 
-            &--box
+            &__box
                 text-align: center
                 background-color: $white
                 border-radius: 4px
@@ -152,7 +119,7 @@
                     width: 54px
                     height: 54px
 
-                &--num
+                &__num
                     position: absolute
                     top: -16px
                     height: 32px
@@ -168,7 +135,7 @@
                         color: $white
                         margin-top: unset
 
-                &--caption
+                &__caption
                     p
                         @include type(14px, 1.5, 500)
                         margin-top: unset
@@ -183,7 +150,7 @@
             *
                 flex: 1 1 0
 
-            &--caption
+            &__caption
                 @include flexVert
                 gap: 24px
                 text-align: left
@@ -200,7 +167,7 @@
                     @include roboto
                     margin-top: unset
 
-            &--image
+            &__image
                 width: 47%
 
         &-carousel
@@ -213,7 +180,7 @@
             @include bgrLight
             gap: 76px
 
-            &--row
+            &__row
                 @include flexOr
                 gap: 76px
                 align-items: center
@@ -221,7 +188,7 @@
                 *
                     flex: 1 1 0
 
-                &--caption
+                &__caption
                     padding: 48px
 
                     h3
@@ -233,13 +200,13 @@
                         @include roboto
                         margin-top: 24px
 
-                &--image
+                &__image
                     width: 48%
 
                 &:nth-last-of-type(even)
                     justify-content: flex-end
                     
-                    .lp-zigzag--row--caption
+                    .lp-zigzag__row__caption
                         order: -1
 
         &-faq
@@ -249,7 +216,7 @@
             align-items: center
             gap: 48px
 
-            &--caption
+            &__caption
                 text-align: center
                 @include flexVert
                 gap: 24px
@@ -259,12 +226,12 @@
                     color: $gold
                     @include roboto
 
-            &--units
+            &__units
                 @include flexVert
                 gap: 16px
                 width: 100%
 
-            &--box 
+            &__box 
                 background-color: $white
                 border-radius: 8px
                 box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.15)
@@ -275,7 +242,7 @@
                 &:hover
                     box-shadow: 0 1px 8px 0 rgba(0, 0, 0, 0.2)
 
-                &__handle 
+                &--handle 
                     @include flexOr
                     gap: 16px
                     color: $gold
@@ -286,7 +253,7 @@
                         color: $gold
                 
 
-                &__content 
+                &--content 
                     padding: 0 36px
                     max-height: 0
                     overflow: hidden
@@ -298,15 +265,15 @@
                         @include type(14px, 1.5, 400)
                         margin-top: 0
                 
-                &__active 
-                    .lp-faq--box__content 
+                &--active 
+                    .lp-faq__box--content 
                         padding: 8px 36px 20px
                         opacity: 1
 
-                    .lp-faq--box--icon
+                    .lp-faq__box__icon
                         transform: rotate(0deg)
 
-                &--icon
+                &__icon
                     width: 20px
                     height: 20px
                     transform: rotate(180deg)
@@ -318,12 +285,12 @@
             @include flexVert
             gap: 76px
 
-            &--row
+            &__row
                 @include flexOr
                 justify-content: space-between
                 align-items: center
 
-            &--caption
+            &__caption
                 @include flexVert
                 gap: 24px
                 width: 47%
@@ -338,7 +305,7 @@
                     @include roboto
                     margin-top: unset
 
-            &--image
+            &__image
                 width: 50%
                 padding: 32px
 
@@ -353,7 +320,7 @@
                     text-align: center
                     @include roboto
 
-            &--container
+            &__container
                 flex-basis: 50%
 
                 .alza-btn
@@ -375,7 +342,7 @@
                         width: 100%
                         height: 100% 
 
-            &--row
+            &__row
                 @include flexOr
                 justify-content: center
                 gap: 24px
@@ -386,7 +353,7 @@
                     align-self: center
 
 .layout-0 #landingpage
-    .lp-perex, .lp-text, .lp-faq, .lp-screen
+    .lp-perex, .lp-text, .lp-faq
             @include section(76, 65, 76, 65)
 
     .lp
@@ -396,11 +363,11 @@
         &-history
             @include section(24, 65, 76, 65)
 
-        &-zigzag--row
-            &--image
+        &-zigzag__row
+            &__image
                 width: 46%
 
-            &--caption
+            &__caption
                 padding: 0
 
 @media only screen and (max-width: 1035px)
@@ -415,16 +382,8 @@
                 h2, h3, p
                     text-align: center
 
-            &-screen
-                @include section(76, 65, 66, 65)
-                flex-direction: column-reverse
-                gap: 60px
-
-                h2, h3, p
-                    text-align: center
-
             &-win
-                &--box
+                &__box
                     padding-left: 24px
                     padding-right: 24px
 
@@ -436,7 +395,7 @@
                 h3, p
                     text-align: center
 
-                &--image
+                &__image
                     order: 1
                     width: 100%
 
@@ -448,45 +407,45 @@
                 h3, p
                     text-align: center
 
-                &--image
+                &__image
                     order: -1
 
             &-zigzag
-                &--row
+                &__row
                     gap: 4%
 
-                    &--caption
+                    &__caption
                         width: unset
 
             &-history
                 @include section(24, 65, 0, 65)
                 gap: 32px
 
-                &--row
+                &__row
                     flex-direction: column-reverse
                     gap: 32px
 
                     h3, p
                         text-align: center
 
-                    &:nth-of-type(1) .lp-history--image
+                    &:nth-of-type(1) .lp-history__image
                         order: 0
 
-                    &:nth-of-type(2) .lp-history--image
+                    &:nth-of-type(2) .lp-history__image
                         order: -1
 
-                &--caption
+                &__caption
                     width: unset
 
-                &--image
+                &__image
                     width: unset
 
 @media only screen and (max-width: 755px)
     .mobile #landingpage,
     .mobileapp #landingpage
         .lp
-            &-perex, &-screen
-                &--caption
+            &-perex
+                &__caption
                     h2
                         @include type(24px, 1.25, 700)
 
@@ -496,12 +455,12 @@
                     p
                         @include type(14px, 1.5, 400)
 
-                &--image
+                &__image
                     width: unset
                     order: 1
 
             &-expo
-                &--caption
+                &__caption
                     h3
                         @include type(20px, 1.25, 500)
 
@@ -512,19 +471,19 @@
                 h3
                     @include type(20px, 1.5, 500)
 
-                &--boxes
+                &__boxes
                     flex-direction: column
                     max-width: 300px
 
             &-text
-                &--caption
+                &__caption
                     h3
                         @include type(20px, 1.25, 500)
 
                     p
                         @include type(14px, 1.5, 400)
 
-                &--image
+                &__image
                     width: unset
 
             &-carousel
@@ -535,14 +494,14 @@
             &-zigzag
                 gap: 48px
 
-                &--row
+                &__row
                     flex-direction: column
                     gap: 48px
 
-                    &--image
+                    &__image
                         width: 100%
 
-                    &--caption
+                    &__caption
                         padding: 0
 
                         h3
@@ -552,7 +511,7 @@
                             @include type(14px, 1.5, 400)
                             text-align: center
 
-                    &:nth-last-of-type(even) .lp-zigzag--row--caption
+                    &:nth-last-of-type(even) .lp-zigzag__row__caption
                         order: 0
 
                         h3, p
@@ -561,18 +520,18 @@
             &-faq
                 @include section(76, 65, 76, 65)
 
-                &--box
-                    &__handle h4
+                &__box
+                    &--handle h4
                         flex: 1 1 0
 
-                    &--icon
+                    &__icon
                         width: 12px
 
-                    &__content 
+                    &--content 
                         padding: 0 28px
                 
-                    &__active 
-                        .lp-faq--box__content 
+                    &--active 
+                        .lp-faq__box--content 
                             padding: 8px 28px 20px
 
                 h3
@@ -592,7 +551,7 @@
                     @include type(14px, 1.5, 400)
 
             &-video
-                &--row
+                &__row
                     flex-direction: column
                     gap: 48px
 
@@ -603,7 +562,7 @@
     .mobile #landingpage,
     .mobileapp #landingpage
         .lp
-            &-perex, &-screen
+            &-perex
                 @include section(36, 30, 46, 30)
                 gap: 24px
 
@@ -631,7 +590,7 @@
             &-video
                 @include section(36, 30, 56, 30)
                 
-                &--row--unit
+                &__row__unit
                     width: 100%
 
                     p

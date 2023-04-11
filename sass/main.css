@@ -31,7 +31,7 @@
   font-weight: 500;
 }
 #landingpage a:hover {
-  color: #440908;
+  color: #ffffff;
 }
 #landingpage img {
   display: block;
@@ -66,7 +66,7 @@
   background-color: #3a6b68;
   box-shadow: none;
 }
-#landingpage .alza-btn__disabled {
+#landingpage .alza-btn--disabled {
   background-color: rgba(79, 147, 142, 0.5);
   box-shadow: none;
 }
@@ -82,36 +82,54 @@
   padding-top: 64px;
 }
 
-.layout-0 #landingpage .alza-layout__10 {
+.layout-0 #landingpage .alza-layout--10 {
   padding-left: 15px;
   padding-right: 15px;
 }
 
 @media only screen and (max-width: 809px) {
-  .mobile #landingpage .alza-layout__10,
-  .mobileapp #landingpage .alza-layout__10 {
+  .mobile #landingpage .alza-layout--10,
+  .mobileapp #landingpage .alza-layout--10 {
     padding-left: 15px;
     padding-right: 15px;
   }
 }
 #layout_switch {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  justify-content: center;
   position: fixed;
   left: 20px;
   top: 20px;
   z-index: 100;
+  width: 180px;
+  height: 70px;
+  background: white;
+  box-shadow: 0px 2px 4px 0px rgba(128, 128, 128, 0.3);
+  border-radius: 5px;
 }
 #layout_switch button {
-  display: block;
-  color: #fff;
-  background: #801310;
-  font-size: 10px;
-  width: 24px;
-  height: 24px;
-  border-radius: 100%;
-  margin-bottom: 5px;
-  box-shadow: 0px 4px 10px 0px rgba(68, 3, 3, 0.3333333333);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: white;
+  box-shadow: 0px 2px 4px 0px rgba(128, 128, 128, 0.5);
+  border-radius: 5px;
+  width: 45px;
+  height: 45px;
+  margin: 5px;
   cursor: pointer;
   border: none;
+}
+#layout_switch button .icon {
+  width: 30px;
+  height: 30px;
+  fill: #737373;
+}
+#layout_switch button.active {
+  box-shadow: inset 0px 2px 4px 0px rgba(128, 128, 128, 0.7);
 }
 
 #landingpage {
@@ -523,6 +541,7 @@ button.swiper-pagination-bullet {
 .swiper-scrollbar {
   border-radius: 10px;
   position: relative;
+  touch-action: none;
   -ms-touch-action: none;
   background: rgba(0, 0, 0, 0.1);
 }
@@ -648,7 +667,6 @@ button.swiper-pagination-bullet {
 
 .swiper-container-cube .swiper-slide {
   pointer-events: none;
-  -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
   z-index: 1;
   visibility: hidden;
@@ -683,7 +701,6 @@ button.swiper-pagination-bullet {
 .swiper-container-cube .swiper-slide-shadow-right,
 .swiper-container-cube .swiper-slide-shadow-top {
   z-index: 0;
-  -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
 }
 
@@ -705,7 +722,6 @@ button.swiper-pagination-bullet {
 
 .swiper-container-flip .swiper-slide {
   pointer-events: none;
-  -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
   z-index: 1;
 }
@@ -724,7 +740,6 @@ button.swiper-pagination-bullet {
 .swiper-container-flip .swiper-slide-shadow-right,
 .swiper-container-flip .swiper-slide-shadow-top {
   z-index: 0;
-  -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
 }
 
@@ -932,12 +947,12 @@ button.swiper-pagination-bullet {
 #landingpage .lp-perex * {
   flex: 1 1 0;
 }
-#landingpage .lp-perex--caption {
+#landingpage .lp-perex__caption {
   display: flex;
   flex-direction: column;
   gap: 24px;
 }
-#landingpage .lp-perex--caption h2 {
+#landingpage .lp-perex__caption h2 {
   font-size: 30px;
   line-height: 37.5px;
   font-weight: 700;
@@ -945,21 +960,21 @@ button.swiper-pagination-bullet {
   font-family: "Roboto", sans-serif;
   color: #801310;
 }
-#landingpage .lp-perex--caption h3 {
+#landingpage .lp-perex__caption h3 {
   font-size: 24px;
   line-height: 30px;
   font-weight: 500;
   color: #4F938E;
   font-family: "Roboto", sans-serif;
 }
-#landingpage .lp-perex--caption p {
+#landingpage .lp-perex__caption p {
   font-size: 16px;
   line-height: 24px;
   font-weight: 400;
   font-family: "Roboto", sans-serif;
   margin-top: unset;
 }
-#landingpage .lp-perex--image {
+#landingpage .lp-perex__image {
   width: 49%;
 }
 #landingpage .lp-expo {
@@ -977,7 +992,7 @@ button.swiper-pagination-bullet {
 #landingpage .lp-expo * {
   flex: 1 1 0;
 }
-#landingpage .lp-expo--caption {
+#landingpage .lp-expo__caption {
   display: flex;
   flex-direction: column;
   gap: 24px;
@@ -985,75 +1000,30 @@ button.swiper-pagination-bullet {
   position: relative;
   z-index: 5;
 }
-#landingpage .lp-expo--caption h3 {
+#landingpage .lp-expo__caption h3 {
   font-size: 24px;
   line-height: 30px;
   font-weight: 500;
   color: #4F938E;
   font-family: "Roboto", sans-serif;
 }
-#landingpage .lp-expo--caption p {
+#landingpage .lp-expo__caption p {
   font-size: 16px;
   line-height: 24px;
   font-weight: 400;
   font-family: "Roboto", sans-serif;
   margin-top: unset;
 }
-#landingpage .lp-expo--caption p a {
+#landingpage .lp-expo__caption p a {
   color: #440908;
   font-weight: 500;
 }
-#landingpage .lp-expo--caption p a:hover {
+#landingpage .lp-expo__caption p a:hover {
   color: #4F938E;
 }
-#landingpage .lp-expo--image {
+#landingpage .lp-expo__image {
   width: 49%;
   border-radius: 4px;
-}
-#landingpage .lp-screen {
-  padding-top: 76px;
-  padding-right: 165px;
-  padding-bottom: 76px;
-  padding-left: 165px;
-  background: radial-gradient(ellipse, #f3fffe 0%, #e4fffc 100%);
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  align-items: center;
-  gap: 48px;
-}
-#landingpage .lp-screen * {
-  flex: 1 1 0;
-}
-#landingpage .lp-screen--caption {
-  display: flex;
-  flex-direction: column;
-  gap: 24px;
-}
-#landingpage .lp-screen--caption h2 {
-  font-size: 30px;
-  line-height: 37.5px;
-  font-weight: 700;
-  text-transform: uppercase;
-  font-family: "Roboto", sans-serif;
-  color: #212121;
-}
-#landingpage .lp-screen--caption h3 {
-  font-size: 24px;
-  line-height: 30px;
-  font-weight: 500;
-  color: #4F938E;
-  font-family: "Roboto", sans-serif;
-}
-#landingpage .lp-screen--caption p {
-  font-size: 16px;
-  line-height: 24px;
-  font-weight: 400;
-  font-family: "Roboto", sans-serif;
-  margin-top: unset;
-}
-#landingpage .lp-screen--image {
-  width: 46%;
 }
 #landingpage .lp-win {
   padding-top: 76px;
@@ -1077,13 +1047,13 @@ button.swiper-pagination-bullet {
 #landingpage .lp-win h3 span {
   display: block;
 }
-#landingpage .lp-win--boxes {
+#landingpage .lp-win__boxes {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
   gap: 20px;
 }
-#landingpage .lp-win--box {
+#landingpage .lp-win__box {
   text-align: center;
   background-color: #ffffff;
   border-radius: 4px;
@@ -1097,11 +1067,11 @@ button.swiper-pagination-bullet {
   cursor: default;
   position: relative;
 }
-#landingpage .lp-win--box .icon {
+#landingpage .lp-win__box .icon {
   width: 54px;
   height: 54px;
 }
-#landingpage .lp-win--box--num {
+#landingpage .lp-win__box__num {
   position: absolute;
   top: -16px;
   height: 32px;
@@ -1112,7 +1082,7 @@ button.swiper-pagination-bullet {
   flex-direction: column;
   justify-content: center;
 }
-#landingpage .lp-win--box--num p {
+#landingpage .lp-win__box__num p {
   font-size: 14px;
   line-height: 14px;
   font-weight: 500;
@@ -1120,7 +1090,7 @@ button.swiper-pagination-bullet {
   color: #ffffff;
   margin-top: unset;
 }
-#landingpage .lp-win--box--caption p {
+#landingpage .lp-win__box__caption p {
   font-size: 14px;
   line-height: 21px;
   font-weight: 500;
@@ -1141,7 +1111,7 @@ button.swiper-pagination-bullet {
 #landingpage .lp-text * {
   flex: 1 1 0;
 }
-#landingpage .lp-text--caption {
+#landingpage .lp-text__caption {
   display: flex;
   flex-direction: column;
   gap: 24px;
@@ -1149,21 +1119,21 @@ button.swiper-pagination-bullet {
   position: relative;
   z-index: 5;
 }
-#landingpage .lp-text--caption h3 {
+#landingpage .lp-text__caption h3 {
   font-size: 24px;
   line-height: 30px;
   font-weight: 500;
   color: #4F938E;
   font-family: "Roboto", sans-serif;
 }
-#landingpage .lp-text--caption p {
+#landingpage .lp-text__caption p {
   font-size: 16px;
   line-height: 24px;
   font-weight: 400;
   font-family: "Roboto", sans-serif;
   margin-top: unset;
 }
-#landingpage .lp-text--image {
+#landingpage .lp-text__image {
   width: 47%;
 }
 #landingpage .lp-carousel {
@@ -1183,40 +1153,40 @@ button.swiper-pagination-bullet {
   background: radial-gradient(ellipse, #f3fffe 0%, #e4fffc 100%);
   gap: 76px;
 }
-#landingpage .lp-zigzag--row {
+#landingpage .lp-zigzag__row {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
   gap: 76px;
   align-items: center;
 }
-#landingpage .lp-zigzag--row * {
+#landingpage .lp-zigzag__row * {
   flex: 1 1 0;
 }
-#landingpage .lp-zigzag--row--caption {
+#landingpage .lp-zigzag__row__caption {
   padding: 48px;
 }
-#landingpage .lp-zigzag--row--caption h3 {
+#landingpage .lp-zigzag__row__caption h3 {
   font-size: 24px;
   line-height: 30px;
   font-weight: 500;
   color: #4F938E;
   font-family: "Roboto", sans-serif;
 }
-#landingpage .lp-zigzag--row--caption p {
+#landingpage .lp-zigzag__row__caption p {
   font-size: 16px;
   line-height: 24px;
   font-weight: 400;
   font-family: "Roboto", sans-serif;
   margin-top: 24px;
 }
-#landingpage .lp-zigzag--row--image {
+#landingpage .lp-zigzag__row__image {
   width: 48%;
 }
-#landingpage .lp-zigzag--row:nth-last-of-type(even) {
+#landingpage .lp-zigzag__row:nth-last-of-type(even) {
   justify-content: flex-end;
 }
-#landingpage .lp-zigzag--row:nth-last-of-type(even) .lp-zigzag--row--caption {
+#landingpage .lp-zigzag__row:nth-last-of-type(even) .lp-zigzag__row__caption {
   order: -1;
 }
 #landingpage .lp-faq {
@@ -1230,26 +1200,26 @@ button.swiper-pagination-bullet {
   align-items: center;
   gap: 48px;
 }
-#landingpage .lp-faq--caption {
+#landingpage .lp-faq__caption {
   text-align: center;
   display: flex;
   flex-direction: column;
   gap: 24px;
 }
-#landingpage .lp-faq--caption h3 {
+#landingpage .lp-faq__caption h3 {
   font-size: 24px;
   line-height: 30px;
   font-weight: 500;
   color: #4F938E;
   font-family: "Roboto", sans-serif;
 }
-#landingpage .lp-faq--units {
+#landingpage .lp-faq__units {
   display: flex;
   flex-direction: column;
   gap: 16px;
   width: 100%;
 }
-#landingpage .lp-faq--box {
+#landingpage .lp-faq__box {
   background-color: #ffffff;
   border-radius: 8px;
   box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.15);
@@ -1257,24 +1227,24 @@ button.swiper-pagination-bullet {
   cursor: pointer;
   transition: all 300ms ease-in-out;
 }
-#landingpage .lp-faq--box:hover {
+#landingpage .lp-faq__box:hover {
   box-shadow: 0 1px 8px 0 rgba(0, 0, 0, 0.2);
 }
-#landingpage .lp-faq--box__handle {
+#landingpage .lp-faq__box--handle {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
   gap: 16px;
   color: #4F938E;
 }
-#landingpage .lp-faq--box__handle h4 {
+#landingpage .lp-faq__box--handle h4 {
   font-size: 14px;
   line-height: 21px;
   font-weight: 500;
   font-family: "Roboto", sans-serif;
   color: #4F938E;
 }
-#landingpage .lp-faq--box__content {
+#landingpage .lp-faq__box--content {
   padding: 0 36px;
   max-height: 0;
   overflow: hidden;
@@ -1282,20 +1252,20 @@ button.swiper-pagination-bullet {
   transition: all 300ms ease-in-out;
   opacity: 0;
 }
-#landingpage .lp-faq--box__content p {
+#landingpage .lp-faq__box--content p {
   font-size: 14px;
   line-height: 21px;
   font-weight: 400;
   margin-top: 0;
 }
-#landingpage .lp-faq--box__active .lp-faq--box__content {
+#landingpage .lp-faq__box--active .lp-faq__box--content {
   padding: 8px 36px 20px;
   opacity: 1;
 }
-#landingpage .lp-faq--box__active .lp-faq--box--icon {
+#landingpage .lp-faq__box--active .lp-faq__box__icon {
   transform: rotate(0deg);
 }
-#landingpage .lp-faq--box--icon {
+#landingpage .lp-faq__box__icon {
   width: 20px;
   height: 20px;
   transform: rotate(180deg);
@@ -1311,34 +1281,34 @@ button.swiper-pagination-bullet {
   flex-direction: column;
   gap: 76px;
 }
-#landingpage .lp-history--row {
+#landingpage .lp-history__row {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
   justify-content: space-between;
   align-items: center;
 }
-#landingpage .lp-history--caption {
+#landingpage .lp-history__caption {
   display: flex;
   flex-direction: column;
   gap: 24px;
   width: 47%;
 }
-#landingpage .lp-history--caption h3 {
+#landingpage .lp-history__caption h3 {
   font-size: 24px;
   line-height: 30px;
   font-weight: 500;
   color: #4F938E;
   font-family: "Roboto", sans-serif;
 }
-#landingpage .lp-history--caption p {
+#landingpage .lp-history__caption p {
   font-size: 16px;
   line-height: 24px;
   font-weight: 400;
   font-family: "Roboto", sans-serif;
   margin-top: unset;
 }
-#landingpage .lp-history--image {
+#landingpage .lp-history__image {
   width: 50%;
   padding: 32px;
 }
@@ -1358,18 +1328,18 @@ button.swiper-pagination-bullet {
   text-align: center;
   font-family: "Roboto", sans-serif;
 }
-#landingpage .lp-video--container {
+#landingpage .lp-video__container {
   flex-basis: 50%;
 }
-#landingpage .lp-video--container .alza-btn {
+#landingpage .lp-video__container .alza-btn {
   margin: 16px 0 32px 50%;
   transform: translate(-50%, 0);
 }
-#landingpage .lp-video--container div {
+#landingpage .lp-video__container div {
   position: relative;
   padding-bottom: 56.25%;
 }
-#landingpage .lp-video--container div iframe {
+#landingpage .lp-video__container div iframe {
   border-radius: 4px;
   position: absolute;
   top: 0;
@@ -1380,7 +1350,7 @@ button.swiper-pagination-bullet {
   width: 100%;
   height: 100%;
 }
-#landingpage .lp-video--row {
+#landingpage .lp-video__row {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
@@ -1388,12 +1358,12 @@ button.swiper-pagination-bullet {
   gap: 24px;
   margin-top: 48px;
 }
-#landingpage .lp-video--row a {
+#landingpage .lp-video__row a {
   margin-top: 24px;
   align-self: center;
 }
 
-.layout-0 #landingpage .lp-perex, .layout-0 #landingpage .lp-text, .layout-0 #landingpage .lp-faq, .layout-0 #landingpage .lp-screen {
+.layout-0 #landingpage .lp-perex, .layout-0 #landingpage .lp-text, .layout-0 #landingpage .lp-faq {
   padding-top: 76px;
   padding-right: 65px;
   padding-bottom: 76px;
@@ -1411,10 +1381,10 @@ button.swiper-pagination-bullet {
   padding-bottom: 76px;
   padding-left: 65px;
 }
-.layout-0 #landingpage .lp-zigzag--row--image {
+.layout-0 #landingpage .lp-zigzag__row__image {
   width: 46%;
 }
-.layout-0 #landingpage .lp-zigzag--row--caption {
+.layout-0 #landingpage .lp-zigzag__row__caption {
   padding: 0;
 }
 
@@ -1434,23 +1404,8 @@ button.swiper-pagination-bullet {
   .mobileapp #landingpage .lp-perex p {
     text-align: center;
   }
-  .mobile #landingpage .lp-screen,
-  .mobileapp #landingpage .lp-screen {
-    padding-top: 76px;
-    padding-right: 65px;
-    padding-bottom: 66px;
-    padding-left: 65px;
-    flex-direction: column-reverse;
-    gap: 60px;
-  }
-  .mobile #landingpage .lp-screen h2, .mobile #landingpage .lp-screen h3, .mobile #landingpage .lp-screen p,
-  .mobileapp #landingpage .lp-screen h2,
-  .mobileapp #landingpage .lp-screen h3,
-  .mobileapp #landingpage .lp-screen p {
-    text-align: center;
-  }
-  .mobile #landingpage .lp-win--box,
-  .mobileapp #landingpage .lp-win--box {
+  .mobile #landingpage .lp-win__box,
+  .mobileapp #landingpage .lp-win__box {
     padding-left: 24px;
     padding-right: 24px;
   }
@@ -1468,8 +1423,8 @@ button.swiper-pagination-bullet {
   .mobileapp #landingpage .lp-expo p {
     text-align: center;
   }
-  .mobile #landingpage .lp-expo--image,
-  .mobileapp #landingpage .lp-expo--image {
+  .mobile #landingpage .lp-expo__image,
+  .mobileapp #landingpage .lp-expo__image {
     order: 1;
     width: 100%;
   }
@@ -1487,16 +1442,16 @@ button.swiper-pagination-bullet {
   .mobileapp #landingpage .lp-text p {
     text-align: center;
   }
-  .mobile #landingpage .lp-text--image,
-  .mobileapp #landingpage .lp-text--image {
+  .mobile #landingpage .lp-text__image,
+  .mobileapp #landingpage .lp-text__image {
     order: -1;
   }
-  .mobile #landingpage .lp-zigzag--row,
-  .mobileapp #landingpage .lp-zigzag--row {
+  .mobile #landingpage .lp-zigzag__row,
+  .mobileapp #landingpage .lp-zigzag__row {
     gap: 4%;
   }
-  .mobile #landingpage .lp-zigzag--row--caption,
-  .mobileapp #landingpage .lp-zigzag--row--caption {
+  .mobile #landingpage .lp-zigzag__row__caption,
+  .mobileapp #landingpage .lp-zigzag__row__caption {
     width: unset;
   }
   .mobile #landingpage .lp-history,
@@ -1507,69 +1462,65 @@ button.swiper-pagination-bullet {
     padding-left: 65px;
     gap: 32px;
   }
-  .mobile #landingpage .lp-history--row,
-  .mobileapp #landingpage .lp-history--row {
+  .mobile #landingpage .lp-history__row,
+  .mobileapp #landingpage .lp-history__row {
     flex-direction: column-reverse;
     gap: 32px;
   }
-  .mobile #landingpage .lp-history--row h3, .mobile #landingpage .lp-history--row p,
-  .mobileapp #landingpage .lp-history--row h3,
-  .mobileapp #landingpage .lp-history--row p {
+  .mobile #landingpage .lp-history__row h3, .mobile #landingpage .lp-history__row p,
+  .mobileapp #landingpage .lp-history__row h3,
+  .mobileapp #landingpage .lp-history__row p {
     text-align: center;
   }
-  .mobile #landingpage .lp-history--row:nth-of-type(1) .lp-history--image,
-  .mobileapp #landingpage .lp-history--row:nth-of-type(1) .lp-history--image {
+  .mobile #landingpage .lp-history__row:nth-of-type(1) .lp-history__image,
+  .mobileapp #landingpage .lp-history__row:nth-of-type(1) .lp-history__image {
     order: 0;
   }
-  .mobile #landingpage .lp-history--row:nth-of-type(2) .lp-history--image,
-  .mobileapp #landingpage .lp-history--row:nth-of-type(2) .lp-history--image {
+  .mobile #landingpage .lp-history__row:nth-of-type(2) .lp-history__image,
+  .mobileapp #landingpage .lp-history__row:nth-of-type(2) .lp-history__image {
     order: -1;
   }
-  .mobile #landingpage .lp-history--caption,
-  .mobileapp #landingpage .lp-history--caption {
+  .mobile #landingpage .lp-history__caption,
+  .mobileapp #landingpage .lp-history__caption {
     width: unset;
   }
-  .mobile #landingpage .lp-history--image,
-  .mobileapp #landingpage .lp-history--image {
+  .mobile #landingpage .lp-history__image,
+  .mobileapp #landingpage .lp-history__image {
     width: unset;
   }
 }
 @media only screen and (max-width: 755px) {
-  .mobile #landingpage .lp-perex--caption h2, .mobile #landingpage .lp-screen--caption h2,
-  .mobileapp #landingpage .lp-perex--caption h2,
-  .mobileapp #landingpage .lp-screen--caption h2 {
+  .mobile #landingpage .lp-perex__caption h2,
+  .mobileapp #landingpage .lp-perex__caption h2 {
     font-size: 24px;
     line-height: 30px;
     font-weight: 700;
   }
-  .mobile #landingpage .lp-perex--caption h3, .mobile #landingpage .lp-screen--caption h3,
-  .mobileapp #landingpage .lp-perex--caption h3,
-  .mobileapp #landingpage .lp-screen--caption h3 {
+  .mobile #landingpage .lp-perex__caption h3,
+  .mobileapp #landingpage .lp-perex__caption h3 {
     font-size: 20px;
     line-height: 25px;
     font-weight: 500;
   }
-  .mobile #landingpage .lp-perex--caption p, .mobile #landingpage .lp-screen--caption p,
-  .mobileapp #landingpage .lp-perex--caption p,
-  .mobileapp #landingpage .lp-screen--caption p {
+  .mobile #landingpage .lp-perex__caption p,
+  .mobileapp #landingpage .lp-perex__caption p {
     font-size: 14px;
     line-height: 21px;
     font-weight: 400;
   }
-  .mobile #landingpage .lp-perex--image, .mobile #landingpage .lp-screen--image,
-  .mobileapp #landingpage .lp-perex--image,
-  .mobileapp #landingpage .lp-screen--image {
+  .mobile #landingpage .lp-perex__image,
+  .mobileapp #landingpage .lp-perex__image {
     width: unset;
     order: 1;
   }
-  .mobile #landingpage .lp-expo--caption h3,
-  .mobileapp #landingpage .lp-expo--caption h3 {
+  .mobile #landingpage .lp-expo__caption h3,
+  .mobileapp #landingpage .lp-expo__caption h3 {
     font-size: 20px;
     line-height: 25px;
     font-weight: 500;
   }
-  .mobile #landingpage .lp-expo--caption p,
-  .mobileapp #landingpage .lp-expo--caption p {
+  .mobile #landingpage .lp-expo__caption p,
+  .mobileapp #landingpage .lp-expo__caption p {
     font-size: 14px;
     line-height: 21px;
     font-weight: 400;
@@ -1580,25 +1531,25 @@ button.swiper-pagination-bullet {
     line-height: 30px;
     font-weight: 500;
   }
-  .mobile #landingpage .lp-win--boxes,
-  .mobileapp #landingpage .lp-win--boxes {
+  .mobile #landingpage .lp-win__boxes,
+  .mobileapp #landingpage .lp-win__boxes {
     flex-direction: column;
     max-width: 300px;
   }
-  .mobile #landingpage .lp-text--caption h3,
-  .mobileapp #landingpage .lp-text--caption h3 {
+  .mobile #landingpage .lp-text__caption h3,
+  .mobileapp #landingpage .lp-text__caption h3 {
     font-size: 20px;
     line-height: 25px;
     font-weight: 500;
   }
-  .mobile #landingpage .lp-text--caption p,
-  .mobileapp #landingpage .lp-text--caption p {
+  .mobile #landingpage .lp-text__caption p,
+  .mobileapp #landingpage .lp-text__caption p {
     font-size: 14px;
     line-height: 21px;
     font-weight: 400;
   }
-  .mobile #landingpage .lp-text--image,
-  .mobileapp #landingpage .lp-text--image {
+  .mobile #landingpage .lp-text__image,
+  .mobileapp #landingpage .lp-text__image {
     width: unset;
   }
   .mobile #landingpage .lp-carousel .swiper h3,
@@ -1611,40 +1562,40 @@ button.swiper-pagination-bullet {
   .mobileapp #landingpage .lp-zigzag {
     gap: 48px;
   }
-  .mobile #landingpage .lp-zigzag--row,
-  .mobileapp #landingpage .lp-zigzag--row {
+  .mobile #landingpage .lp-zigzag__row,
+  .mobileapp #landingpage .lp-zigzag__row {
     flex-direction: column;
     gap: 48px;
   }
-  .mobile #landingpage .lp-zigzag--row--image,
-  .mobileapp #landingpage .lp-zigzag--row--image {
+  .mobile #landingpage .lp-zigzag__row__image,
+  .mobileapp #landingpage .lp-zigzag__row__image {
     width: 100%;
   }
-  .mobile #landingpage .lp-zigzag--row--caption,
-  .mobileapp #landingpage .lp-zigzag--row--caption {
+  .mobile #landingpage .lp-zigzag__row__caption,
+  .mobileapp #landingpage .lp-zigzag__row__caption {
     padding: 0;
   }
-  .mobile #landingpage .lp-zigzag--row--caption h3,
-  .mobileapp #landingpage .lp-zigzag--row--caption h3 {
+  .mobile #landingpage .lp-zigzag__row__caption h3,
+  .mobileapp #landingpage .lp-zigzag__row__caption h3 {
     font-size: 20px;
     line-height: 25px;
     font-weight: 500;
     text-align: center;
   }
-  .mobile #landingpage .lp-zigzag--row--caption p,
-  .mobileapp #landingpage .lp-zigzag--row--caption p {
+  .mobile #landingpage .lp-zigzag__row__caption p,
+  .mobileapp #landingpage .lp-zigzag__row__caption p {
     font-size: 14px;
     line-height: 21px;
     font-weight: 400;
     text-align: center;
   }
-  .mobile #landingpage .lp-zigzag--row:nth-last-of-type(even) .lp-zigzag--row--caption,
-  .mobileapp #landingpage .lp-zigzag--row:nth-last-of-type(even) .lp-zigzag--row--caption {
+  .mobile #landingpage .lp-zigzag__row:nth-last-of-type(even) .lp-zigzag__row__caption,
+  .mobileapp #landingpage .lp-zigzag__row:nth-last-of-type(even) .lp-zigzag__row__caption {
     order: 0;
   }
-  .mobile #landingpage .lp-zigzag--row:nth-last-of-type(even) .lp-zigzag--row--caption h3, .mobile #landingpage .lp-zigzag--row:nth-last-of-type(even) .lp-zigzag--row--caption p,
-  .mobileapp #landingpage .lp-zigzag--row:nth-last-of-type(even) .lp-zigzag--row--caption h3,
-  .mobileapp #landingpage .lp-zigzag--row:nth-last-of-type(even) .lp-zigzag--row--caption p {
+  .mobile #landingpage .lp-zigzag__row:nth-last-of-type(even) .lp-zigzag__row__caption h3, .mobile #landingpage .lp-zigzag__row:nth-last-of-type(even) .lp-zigzag__row__caption p,
+  .mobileapp #landingpage .lp-zigzag__row:nth-last-of-type(even) .lp-zigzag__row__caption h3,
+  .mobileapp #landingpage .lp-zigzag__row:nth-last-of-type(even) .lp-zigzag__row__caption p {
     text-align: center;
   }
   .mobile #landingpage .lp-faq,
@@ -1654,20 +1605,20 @@ button.swiper-pagination-bullet {
     padding-bottom: 76px;
     padding-left: 65px;
   }
-  .mobile #landingpage .lp-faq--box__handle h4,
-  .mobileapp #landingpage .lp-faq--box__handle h4 {
+  .mobile #landingpage .lp-faq__box--handle h4,
+  .mobileapp #landingpage .lp-faq__box--handle h4 {
     flex: 1 1 0;
   }
-  .mobile #landingpage .lp-faq--box--icon,
-  .mobileapp #landingpage .lp-faq--box--icon {
+  .mobile #landingpage .lp-faq__box__icon,
+  .mobileapp #landingpage .lp-faq__box__icon {
     width: 12px;
   }
-  .mobile #landingpage .lp-faq--box__content,
-  .mobileapp #landingpage .lp-faq--box__content {
+  .mobile #landingpage .lp-faq__box--content,
+  .mobileapp #landingpage .lp-faq__box--content {
     padding: 0 28px;
   }
-  .mobile #landingpage .lp-faq--box__active .lp-faq--box__content,
-  .mobileapp #landingpage .lp-faq--box__active .lp-faq--box__content {
+  .mobile #landingpage .lp-faq__box--active .lp-faq__box--content,
+  .mobileapp #landingpage .lp-faq__box--active .lp-faq__box--content {
     padding: 8px 28px 20px;
   }
   .mobile #landingpage .lp-faq h3,
@@ -1700,8 +1651,8 @@ button.swiper-pagination-bullet {
     line-height: 21px;
     font-weight: 400;
   }
-  .mobile #landingpage .lp-video--row,
-  .mobileapp #landingpage .lp-video--row {
+  .mobile #landingpage .lp-video__row,
+  .mobileapp #landingpage .lp-video__row {
     flex-direction: column;
     gap: 48px;
   }
@@ -1713,9 +1664,8 @@ button.swiper-pagination-bullet {
   }
 }
 @media only screen and (max-width: 450px) {
-  .mobile #landingpage .lp-perex, .mobile #landingpage .lp-screen,
-  .mobileapp #landingpage .lp-perex,
-  .mobileapp #landingpage .lp-screen {
+  .mobile #landingpage .lp-perex,
+  .mobileapp #landingpage .lp-perex {
     padding-top: 36px;
     padding-right: 30px;
     padding-bottom: 46px;
@@ -1778,16 +1728,16 @@ button.swiper-pagination-bullet {
     padding-bottom: 56px;
     padding-left: 30px;
   }
-  .mobile #landingpage .lp-video--row--unit,
-  .mobileapp #landingpage .lp-video--row--unit {
+  .mobile #landingpage .lp-video__row__unit,
+  .mobileapp #landingpage .lp-video__row__unit {
     width: 100%;
   }
-  .mobile #landingpage .lp-video--row--unit p,
-  .mobileapp #landingpage .lp-video--row--unit p {
+  .mobile #landingpage .lp-video__row__unit p,
+  .mobileapp #landingpage .lp-video__row__unit p {
     text-align: center;
   }
-  .mobile #landingpage .lp-video--row--unit img,
-  .mobileapp #landingpage .lp-video--row--unit img {
+  .mobile #landingpage .lp-video__row__unit img,
+  .mobileapp #landingpage .lp-video__row__unit img {
     display: none;
   }
-}/*# sourceMappingURL=main.css.map */
+}
