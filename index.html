@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>lego masters</title>
     <link rel="stylesheet" href="sass/main.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 </head>
 
 <body>
@@ -35,6 +36,7 @@
             <!-- landing page -->
             <div id="landingpage">
                 <div class="lp">
+                    
                     <!-- header -->
                     <section class="lp-header">
                         <img src="https://cdn.alza.cz/Foto/ImgGalery/Image/lego-rebuild-the-world-akce.jpg"
@@ -155,25 +157,77 @@
                             height="400" width="500" class="lp-text__image" />
                     </section>
 
-                    <!-- carousel a-->
+                    <!-- carousel A -->
+                    <!-- preview - REPLACE with dynamic version beofre upload to admin -->
                     <section class="lp-carousel ppCarousel">
                         <div class="swiper">
                             <h3>O co se hraje?</h3>
-                            <div class="lp-products swiper-container" data-products="sp24608-20"
-                                data-settings="shuffle show-disabled">
-                                <div class="swiper-wrapper">
-                                    <a class="swiper-slide" data-prod="" data-prod-url="" href="#">
-                                        <img class="swiper-product-img" data-prod-img="" src="/img/blank.gif" alt="" />
-
-                                        <p class="swiper-product-name" data-prod-name="short-35">&nbsp;</p>
-
-                                        <p class="swiper-product-price" data-prod-price="">&nbsp;</p>
-                                    </a>
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide" data-prod="" data-prod-url="">
+                                    <img class="swiper-product-img loaded" data-prod-img="" src="https://cdn.alza.cz/Foto/f8/XB/XBSE0174.jpg" alt="">
+                                    <p class="swiper-product-name" data-prod-name="short-35">Assassins Creed Valhalla Dawn of…</p>
+                                    <p class="swiper-product-price" data-prod-price="">949&nbsp;Kč</p>
                                 </div>
+                                <div class="swiper-slide" data-prod="" data-prod-url="">
+                                    <img class="swiper-product-img loaded" data-prod-img="" src="https://cdn.alza.cz/Foto/f8/MS/MSX1266.jpg" alt="">
+                                    <p class="swiper-product-name" data-prod-name="short-35">Assassins Creed Valhalla Dawn of…</p>
+                                    <p class="swiper-product-price" data-prod-price="">949&nbsp;Kč</p>
+                                </div>
+                                <div class="swiper-slide" data-prod="" data-prod-url="">
+                                    <img class="swiper-product-img loaded" data-prod-img="" src="https://cdn.alza.cz/Foto/f8/XB/XBSE0175.jpg" alt="">
+                                    <p class="swiper-product-name" data-prod-name="short-35">Assassins Creed Valhalla -…</p>
+                                    <p class="swiper-product-price" data-prod-price="">1&nbsp;699&nbsp;Kč</p>
+                                </div>
+                                <div class="swiper-slide" data-prod="" data-prod-url="">
+                                    <img class="swiper-product-img loaded" data-prod-img="" src="https://cdn.alza.cz/Foto/f8/PS/PSV0198.jpg" alt="">
+                                    <p class="swiper-product-name" data-prod-name="short-35">Assassins Creed Valhalla Dawn of…</p>
+                                    <p class="swiper-product-price" data-prod-price="">949&nbsp;Kč</p>
+                                </div>
+                                <div class="swiper-slide" data-prod="" data-prod-url="">
+                                    <img class="swiper-product-img loaded" data-prod-img="" src="https://cdn.alza.cz/Foto/f8/PS/PSV0199.jpg" alt="">
+                                    <p class="swiper-product-name" data-prod-name="short-35">Assassins Creed Valhalla -…</p>
+                                    <p class="swiper-product-price" data-prod-price="">1&nbsp;699&nbsp;Kč</p>
+                                </div>
+                                <div class="swiper-slide" data-prod="" data-prod-url="">
+                                    <img class="swiper-product-img loaded" data-prod-img="" src="https://cdn.alza.cz/Foto/f8/MS/MSX1267.jpg" alt="">
+                                    <p class="swiper-product-name" data-prod-name="short-35">Assassins Creed Valhalla -…</p>
+                                    <p class="swiper-product-price" data-prod-price="">1&nbsp;699&nbsp;Kč</p>
+                                </div>
+                                <div class="swiper-slide" data-prod="" data-prod-url="">
+                                    <img class="swiper-product-img loaded" data-prod-img="" src="https://cdn.alza.cz/Foto/f8/XB/XBSE0174.jpg" alt="">
+                                    <p class="swiper-product-name" data-prod-name="short-35">Assassins Creed Valhalla Dawn of…</p>
+                                    <p class="swiper-product-price" data-prod-price="">949&nbsp;Kč</p>
+                                </div>
+                                <div class="swiper-slide" data-prod="" data-prod-url="">
+                                    <img class="swiper-product-img loaded" data-prod-img="" src="https://cdn.alza.cz/Foto/f8/PS/PSV0198.jpg" alt="">
+                                    <p class="swiper-product-name" data-prod-name="short-35">Assassins Creed Valhalla Dawn of…</p>
+                                    <p class="swiper-product-price" data-prod-price="">949&nbsp;Kč</p>
+                                </div>
+                                <div class="swiper-slide" data-prod="" data-prod-url="">
+                                    <img class="swiper-product-img loaded" data-prod-img="" src="https://cdn.alza.cz/Foto/f8/PS/PSV0199.jpg" alt="">
+                                    <p class="swiper-product-name" data-prod-name="short-35">Assassins Creed Valhalla -…</p>
+                                    <p class="swiper-product-price" data-prod-price="">1&nbsp;699&nbsp;Kč</p>
+                                </div>
+                                <div class="swiper-slide" data-prod="" data-prod-url="">
+                                    <img class="swiper-product-img loaded" data-prod-img="" src="https://cdn.alza.cz/Foto/f8/MS/MSX1266.jpg" alt="">
+                                    <p class="swiper-product-name" data-prod-name="short-35">Assassins Creed Valhalla Dawn of…</p>
+                                    <p class="swiper-product-price" data-prod-price="">949&nbsp;Kč</p>
+                                </div>
+                                <div class="swiper-slide" data-prod="" data-prod-url="">
+                                    <img class="swiper-product-img loaded" data-prod-img="" src="https://cdn.alza.cz/Foto/f8/XB/XBSE0175.jpg" alt="">
+                                    <p class="swiper-product-name" data-prod-name="short-35">Assassins Creed Valhalla -…</p>
+                                    <p class="swiper-product-price" data-prod-price="">1&nbsp;699&nbsp;Kč</p>
+                                </div>
+                                <div class="swiper-slide" data-prod="" data-prod-url="">
+                                    <img class="swiper-product-img loaded" data-prod-img="" src="https://cdn.alza.cz/Foto/f8/MS/MSX1267.jpg" alt="">
+                                    <p class="swiper-product-name" data-prod-name="short-35">Assassins Creed Valhalla -…</p>
+                                    <p class="swiper-product-price" data-prod-price="">1&nbsp;699&nbsp;Kč</p>
+                                </div>
+                                
                             </div>
-                            <div class="swiper-pagination">
-                                <br />
-                            </div>
+            
+                            <div class="swiper-pagination"></div>
+            
                             <div class="swiper-button-prev">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="26.791" height="26.791"
                                     viewBox="0 0 26.791 26.791" class="swiper-button-img">
@@ -415,24 +469,73 @@
                     </section>
 
                     <!-- carousel B -->
+                    <!-- preview - REPLACE with dynamic version beofre upload to admin -->
                     <section class="lp-carousel ppCarousel">
                         <div class="swiper">
                             <h3>Doporučené sady pro kreativní tvoření</h3>
-                            <div class="lp-products swiper-container" data-products="sp24609-20"
-                                data-settings="shuffle show-disabled">
-                                <div class="swiper-wrapper">
-                                    <a class="swiper-slide" data-prod="" data-prod-url="" href="#">
-                                        <img class="swiper-product-img" data-prod-img="" src="/img/blank.gif" alt="" />
-
-                                        <p class="swiper-product-name" data-prod-name="short-40">&nbsp;</p>
-
-                                        <p class="swiper-product-price" data-prod-price="">&nbsp;</p>
-                                    </a>
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide" data-prod="" data-prod-url="">
+                                    <img class="swiper-product-img loaded" data-prod-img="" src="https://cdn.alza.cz/Foto/f8/XB/XBSE0174.jpg" alt="">
+                                    <p class="swiper-product-name" data-prod-name="short-35">Assassins Creed Valhalla Dawn of…</p>
+                                    <p class="swiper-product-price" data-prod-price="">949&nbsp;Kč</p>
+                                </div>
+                                <div class="swiper-slide" data-prod="" data-prod-url="">
+                                    <img class="swiper-product-img loaded" data-prod-img="" src="https://cdn.alza.cz/Foto/f8/MS/MSX1266.jpg" alt="">
+                                    <p class="swiper-product-name" data-prod-name="short-35">Assassins Creed Valhalla Dawn of…</p>
+                                    <p class="swiper-product-price" data-prod-price="">949&nbsp;Kč</p>
+                                </div>
+                                <div class="swiper-slide" data-prod="" data-prod-url="">
+                                    <img class="swiper-product-img loaded" data-prod-img="" src="https://cdn.alza.cz/Foto/f8/XB/XBSE0175.jpg" alt="">
+                                    <p class="swiper-product-name" data-prod-name="short-35">Assassins Creed Valhalla -…</p>
+                                    <p class="swiper-product-price" data-prod-price="">1&nbsp;699&nbsp;Kč</p>
+                                </div>
+                                <div class="swiper-slide" data-prod="" data-prod-url="">
+                                    <img class="swiper-product-img loaded" data-prod-img="" src="https://cdn.alza.cz/Foto/f8/PS/PSV0198.jpg" alt="">
+                                    <p class="swiper-product-name" data-prod-name="short-35">Assassins Creed Valhalla Dawn of…</p>
+                                    <p class="swiper-product-price" data-prod-price="">949&nbsp;Kč</p>
+                                </div>
+                                <div class="swiper-slide" data-prod="" data-prod-url="">
+                                    <img class="swiper-product-img loaded" data-prod-img="" src="https://cdn.alza.cz/Foto/f8/PS/PSV0199.jpg" alt="">
+                                    <p class="swiper-product-name" data-prod-name="short-35">Assassins Creed Valhalla -…</p>
+                                    <p class="swiper-product-price" data-prod-price="">1&nbsp;699&nbsp;Kč</p>
+                                </div>
+                                <div class="swiper-slide" data-prod="" data-prod-url="">
+                                    <img class="swiper-product-img loaded" data-prod-img="" src="https://cdn.alza.cz/Foto/f8/MS/MSX1267.jpg" alt="">
+                                    <p class="swiper-product-name" data-prod-name="short-35">Assassins Creed Valhalla -…</p>
+                                    <p class="swiper-product-price" data-prod-price="">1&nbsp;699&nbsp;Kč</p>
+                                </div>
+                                <div class="swiper-slide" data-prod="" data-prod-url="">
+                                    <img class="swiper-product-img loaded" data-prod-img="" src="https://cdn.alza.cz/Foto/f8/XB/XBSE0174.jpg" alt="">
+                                    <p class="swiper-product-name" data-prod-name="short-35">Assassins Creed Valhalla Dawn of…</p>
+                                    <p class="swiper-product-price" data-prod-price="">949&nbsp;Kč</p>
+                                </div>
+                                <div class="swiper-slide" data-prod="" data-prod-url="">
+                                    <img class="swiper-product-img loaded" data-prod-img="" src="https://cdn.alza.cz/Foto/f8/PS/PSV0198.jpg" alt="">
+                                    <p class="swiper-product-name" data-prod-name="short-35">Assassins Creed Valhalla Dawn of…</p>
+                                    <p class="swiper-product-price" data-prod-price="">949&nbsp;Kč</p>
+                                </div>
+                                <div class="swiper-slide" data-prod="" data-prod-url="">
+                                    <img class="swiper-product-img loaded" data-prod-img="" src="https://cdn.alza.cz/Foto/f8/PS/PSV0199.jpg" alt="">
+                                    <p class="swiper-product-name" data-prod-name="short-35">Assassins Creed Valhalla -…</p>
+                                    <p class="swiper-product-price" data-prod-price="">1&nbsp;699&nbsp;Kč</p>
+                                </div>
+                                <div class="swiper-slide" data-prod="" data-prod-url="">
+                                    <img class="swiper-product-img loaded" data-prod-img="" src="https://cdn.alza.cz/Foto/f8/MS/MSX1266.jpg" alt="">
+                                    <p class="swiper-product-name" data-prod-name="short-35">Assassins Creed Valhalla Dawn of…</p>
+                                    <p class="swiper-product-price" data-prod-price="">949&nbsp;Kč</p>
+                                </div>
+                                <div class="swiper-slide" data-prod="" data-prod-url="">
+                                    <img class="swiper-product-img loaded" data-prod-img="" src="https://cdn.alza.cz/Foto/f8/XB/XBSE0175.jpg" alt="">
+                                    <p class="swiper-product-name" data-prod-name="short-35">Assassins Creed Valhalla -…</p>
+                                    <p class="swiper-product-price" data-prod-price="">1&nbsp;699&nbsp;Kč</p>
+                                </div>
+                                <div class="swiper-slide" data-prod="" data-prod-url="">
+                                    <img class="swiper-product-img loaded" data-prod-img="" src="https://cdn.alza.cz/Foto/f8/MS/MSX1267.jpg" alt="">
+                                    <p class="swiper-product-name" data-prod-name="short-35">Assassins Creed Valhalla -…</p>
+                                    <p class="swiper-product-price" data-prod-price="">1&nbsp;699&nbsp;Kč</p>
                                 </div>
                             </div>
-                            <div class="swiper-pagination">
-                                <br />
-                            </div>
+                            <div class="swiper-pagination"></div>
                             <div class="swiper-button-prev">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="26.791" height="26.791"
                                     viewBox="0 0 26.791 26.791" class="swiper-button-img">
@@ -449,9 +552,7 @@
                                         transform="translate(14.465 -0.02) rotate(45)" fill="#0094e7"></path>
                                 </svg>
                             </div>
-                            <a class="alza-btn"
-                                href="https://www.alza.cz/hracky/lego-sety-pro-kreativni-tvoreni-sz24609.htm">Více
-                                produktů</a>
+                            <a class="alza-btn" href="https://www.alza.cz/hracky/lego-top-vyber-sz24608.htm">Více produktů</a>
                         </div>
                     </section>
 
