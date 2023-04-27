@@ -32,7 +32,7 @@ function dropDown() {
 
 }; dropDown();
 
-//run carousel (preview version - for testing/production use content of swiper-dynamic.js)
+//run carousel (preview - REPLACE with product-swiper.js before testing!!!)
 function runCarousel() {
 
     /*
